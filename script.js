@@ -8,11 +8,6 @@ class LazyLoader {
   constructor() {
     this.imagesToLoad = [
       {
-        type: 'background',
-        url: 'https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg',
-        element: document.body
-      },
-      {
         type: 'paper',
         url: 'https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1',
         elements: document.querySelectorAll('.paper')
@@ -29,10 +24,7 @@ class LazyLoader {
   }
 
   init() {
-    // Load background images first
     this.loadBackgroundImages();
-    
-    // Load regular images with intersection observer
     this.loadRegularImages();
   }
 
@@ -40,9 +32,7 @@ class LazyLoader {
     this.imagesToLoad.forEach(imageData => {
       const img = new Image();
       img.onload = () => {
-        if (imageData.type === 'background') {
-          imageData.element.classList.add('loaded');
-        } else if (imageData.type === 'paper') {
+        if (imageData.type === 'paper') {
           imageData.elements.forEach(element => {
             element.classList.add('loaded');
           });
