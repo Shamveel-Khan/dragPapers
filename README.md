@@ -127,9 +127,6 @@ const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 2. Open `index.html` in a web browser
 3. Start dragging and interacting with the papers!
 
-## 📝 License
-
-This project is open source and available under the MIT License.
 
 ## 🤝 Contributing
 
