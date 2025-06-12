@@ -1,4 +1,4 @@
-let highestZ = 1;
+let highestZ = 11;
 
 // Detect if device supports touch
 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
